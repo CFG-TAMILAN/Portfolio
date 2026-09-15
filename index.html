@@ -1,10 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>CFG TAMILAN DESIGNS | Creative Portfolio</title>
+
+<!-- POPPINS FONT -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 
@@ -16,8 +21,8 @@
 }
 
 body{
-    font-family:Arial, sans-serif;
-    background:#070707;
+    font-family:'Poppins',sans-serif;
+    background:#050505;
     color:#fff;
     line-height:1.6;
 }
@@ -27,19 +32,25 @@ a{
     text-decoration:none;
 }
 
-/* NAVBAR */
+
+/* ================= NAVBAR ================= */
 
 nav{
     position:fixed;
     top:0;
+    left:0;
     width:100%;
     z-index:1000;
+
     padding:18px 7%;
+
     display:flex;
     justify-content:space-between;
     align-items:center;
-    background:rgba(7,7,7,0.88);
-    backdrop-filter:blur(12px);
+
+    background:rgba(5,5,5,0.80);
+    backdrop-filter:blur(15px);
+
     border-bottom:1px solid #222;
 }
 
@@ -47,71 +58,102 @@ nav{
     font-size:20px;
     font-weight:800;
     letter-spacing:2px;
+
+    text-shadow:
+        0 0 8px rgba(255,255,255,0.25);
 }
 
 nav a{
     margin-left:18px;
     font-size:14px;
     color:#aaa;
-    transition:.3s;
+    transition:0.3s;
 }
 
 nav a:hover{
     color:#fff;
+
+    text-shadow:
+        0 0 10px rgba(255,255,255,0.7);
 }
 
-/* HERO */
+
+/* ================= HERO ================= */
 
 .hero{
     min-height:100vh;
+
     display:flex;
     align-items:center;
     justify-content:center;
+
     text-align:center;
+
     padding:100px 20px 60px;
 
     background:
-    radial-gradient(
-        circle at center,
-        #252525 0%,
-        #111 35%,
-        #070707 70%
-    );
+        radial-gradient(
+            circle at 50% 5%,
+            #303030 0%,
+            #161616 28%,
+            #080808 60%,
+            #000000 100%
+        );
 }
 
 .hero h1{
     font-size:clamp(40px,12vw,100px);
+
     letter-spacing:5px;
     line-height:1.05;
+
     margin-bottom:20px;
+
+    color:#fff;
+
+    text-shadow:
+        0 0 5px rgba(255,255,255,0.5),
+        0 0 15px rgba(255,255,255,0.25);
 }
 
 .hero h2{
     font-size:18px;
     color:#999;
     font-weight:400;
+
     margin-bottom:30px;
 }
 
 .btn{
     display:inline-block;
+
     padding:13px 26px;
+
     border:1px solid #fff;
     border-radius:30px;
-    transition:.3s;
+
+    color:#fff;
+
+    transition:0.3s;
 }
 
 .btn:hover{
     background:#fff;
     color:#000;
+
+    box-shadow:
+        0 0 15px rgba(255,255,255,0.4);
 }
 
-/* SECTIONS */
+
+/* ================= SECTIONS ================= */
 
 section{
     padding:90px 7%;
     max-width:1200px;
     margin:auto;
+
+    background:transparent;
 }
 
 .section-title{
@@ -123,75 +165,96 @@ section{
     color:#777;
 }
 
-/* ABOUT */
+
+/* ================= ABOUT ================= */
 
 .about-box{
     padding:30px;
+
     background:#111;
+
     border:1px solid #252525;
     border-radius:20px;
+
     color:#bbb;
-    font-size:17px;
+
+    font-size:15px;
+
+    box-shadow:
+        0 10px 40px rgba(0,0,0,0.25);
 }
 
-/* WORK */
+
+/* ================= WORK ================= */
 
 .work-grid{
     display:grid;
+
     grid-template-columns:repeat(2,1fr);
+
     gap:20px;
 }
 
 .work-card{
     height:300px;
+
     background:#111;
+
     border:1px solid #292929;
+
     border-radius:20px;
+
     overflow:hidden;
-    transition:.3s;
+
+    transition:0.3s;
 }
 
 .work-card:hover{
     transform:translateY(-5px);
+
     border-color:#555;
+
+    box-shadow:
+        0 10px 30px rgba(255,255,255,0.08);
 }
 
 .work-card img{
     width:100%;
     height:100%;
-    object-fit:cover;
-    display:block;
-}
 
-.logo-placeholder{
-    width:100%;
-    height:100%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    color:#777;
+    object-fit:contain;
+
+    display:block;
+
     padding:20px;
 }
 
-/* SERVICES */
+
+/* ================= SERVICES ================= */
 
 .services{
     display:grid;
+
     grid-template-columns:repeat(3,1fr);
+
     gap:18px;
 }
 
 .service{
     background:#111;
+
     border:1px solid #252525;
+
     padding:30px 20px;
+
     border-radius:18px;
-    transition:.3s;
+
+    transition:0.3s;
 }
 
 .service:hover{
     transform:translateY(-7px);
+
     border-color:#555;
 }
 
@@ -204,52 +267,77 @@ section{
     font-size:14px;
 }
 
-/* CONTACT */
+
+/* ================= CONTACT ================= */
 
 .contact-box{
     text-align:center;
+
     padding:45px 20px;
+
     background:#111;
+
     border:1px solid #252525;
+
     border-radius:20px;
 }
 
 .contact-box p{
     color:#999;
+
     margin-bottom:25px;
 }
 
 .contact-links{
     display:flex;
+
     justify-content:center;
+
     flex-wrap:wrap;
+
     gap:12px;
 }
 
 .contact-links a{
     border:1px solid #333;
+
     padding:11px 20px;
+
     border-radius:25px;
+
     color:#ccc;
-    transition:.3s;
+
+    transition:0.3s;
 }
 
 .contact-links a:hover{
     background:#fff;
+
     color:#000;
+
+    box-shadow:
+        0 0 15px rgba(255,255,255,0.3);
 }
 
-/* FOOTER */
+
+/* ================= FOOTER ================= */
 
 footer{
     text-align:center;
+
     padding:30px 15px;
+
     border-top:1px solid #222;
+
     color:#666;
+
     font-size:13px;
+
+    background:#050505;
 }
 
-/* MOBILE */
+
+/* ================= MOBILE ================= */
 
 @media(max-width:700px){
 
@@ -262,7 +350,7 @@ footer{
     }
 
     .logo{
-        font-size:17px;
+        font-size:16px;
     }
 
     section{
@@ -271,6 +359,7 @@ footer{
 
     .hero h1{
         font-size:45px;
+
         letter-spacing:3px;
     }
 
@@ -293,15 +382,18 @@ footer{
     .section-title{
         font-size:30px;
     }
+
 }
 
 </style>
+
 </head>
 
 
 <body>
 
-<!-- NAVBAR -->
+
+<!-- ================= NAVBAR ================= -->
 
 <nav>
 
@@ -312,9 +404,13 @@ footer{
     <div class="links">
 
         <a href="#home">Home</a>
+
         <a href="#about">About</a>
+
         <a href="#work">Work</a>
+
         <a href="#services">Services</a>
+
         <a href="#contact">Contact</a>
 
     </div>
@@ -322,7 +418,7 @@ footer{
 </nav>
 
 
-<!-- HERO -->
+<!-- ================= HERO ================= -->
 
 <header class="hero" id="home">
 
@@ -345,7 +441,7 @@ footer{
 </header>
 
 
-<!-- ABOUT -->
+<!-- ================= ABOUT ================= -->
 
 <section id="about">
 
@@ -357,16 +453,16 @@ footer{
 
         <p>
             Welcome to CFG TAMILAN'S DESIGNS.
-
-            I'm bala ~ the designer. I can create unique, modern and creative designs
-            for brands, creators and businesses @ affordable price 💜 .
+            I'm bala ~ the designer. I can create unique,
+            modern and creative designs for brands,
+            creators and businesses @ affordable price 💜.
         </p>
 
         <br>
 
         <p>
             Our services include logo design, poster design,
-            branding and creative image works 🫶🕊️ .
+            branding and creative image works 🫶🕊️.
         </p>
 
     </div>
@@ -374,7 +470,7 @@ footer{
 </section>
 
 
-<!-- WORK -->
+<!-- ================= WORK ================= -->
 
 <section id="work">
 
@@ -382,40 +478,69 @@ footer{
         Our <span>Work</span>
     </h2>
 
-
     <div class="work-grid">
 
 
-        <!-- LOGO 1 -->
+        <!-- LOGO 01 -->
 
-        
-                    <div class="work-card">
-    <img src="IMG_20251128_094144_751.webp" alt="Logo Design 01">
-</div>
+        <div class="work-card">
 
-<div class="work-card">
-    <img src="Picsart_26-04-17_15-13-08-475.jpg" alt="Logo Design 02">
-</div>
+            <img
+                src="IMG_20251128_094144_751.webp"
+                alt="Logo Design 01"
+            >
 
-<div class="work-card">
-    <img src="Picsart_26-04-20_01-01-14-338.jpg" alt="Logo Design 03">
-</div>
+        </div>
 
-<div class="work-card">
-    <img src="Untitled1 (1).png" alt="Logo Design 04">
-</div>
+
+        <!-- LOGO 02 -->
+
+        <div class="work-card">
+
+            <img
+                src="Picsart_26-04-17_15-13-08-475.jpg"
+                alt="Logo Design 02"
+            >
+
+        </div>
+
+
+        <!-- LOGO 03 -->
+
+        <div class="work-card">
+
+            <img
+                src="Picsart_26-04-20_01-01-14-338.jpg"
+                alt="Logo Design 03"
+            >
+
+        </div>
+
+
+        <!-- LOGO 04 -->
+
+        <div class="work-card">
+
+            <img
+                src="Untitled1 (1).png"
+                alt="Logo Design 04"
+            >
+
+        </div>
+
+
+    </div>
 
 </section>
 
 
-<!-- SERVICES -->
+<!-- ================= SERVICES ================= -->
 
 <section id="services">
 
     <h2 class="section-title">
         Our <span>Services</span>
     </h2>
-
 
     <div class="services">
 
@@ -467,7 +592,7 @@ footer{
 </section>
 
 
-<!-- CONTACT -->
+<!-- ================= CONTACT ================= -->
 
 <section id="contact">
 
@@ -475,18 +600,14 @@ footer{
         Contact <span>Us</span>
     </h2>
 
-
     <div class="contact-box">
 
         <p>
             Have a project? Let's work together.
         </p>
 
-
         <div class="contact-links">
 
-
-            <!-- INSTAGRAM -->
 
             <a
                 href="https://instagram.com/YOUR_USERNAME"
@@ -496,8 +617,6 @@ footer{
             </a>
 
 
-            <!-- WHATSAPP -->
-
             <a
                 href="https://wa.me/917010144546"
                 target="_blank"
@@ -506,10 +625,8 @@ footer{
             </a>
 
 
-            <!-- EMAIL -->
-
             <a
-                href="mailto: tamilangamingofficial059@gmail.com"
+                href="mailto:tamilangamingofficial059@gmail.com"
             >
                 Email
             </a>
@@ -522,7 +639,7 @@ footer{
 </section>
 
 
-<!-- FOOTER -->
+<!-- ================= FOOTER ================= -->
 
 <footer>
 
@@ -533,5 +650,6 @@ footer{
 
 
 </body>
+
 </html>
     
