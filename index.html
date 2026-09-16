@@ -4,19 +4,39 @@
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>CFG TAMILAN DESIGNS | Portfolio</title>
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
 
-<!-- POPPINS FONT -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<meta name="theme-color"
+      content="#050505">
+
+<meta name="description"
+      content="CFG TAMILAN DESIGNS - Creative Logo, Poster, Photo and Video Editing Portfolio">
+
+<title>CFG TAMILAN DESIGNS | Creative Portfolio</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet">
+
 
 <style>
+
+/* ==================================================
+   RESET
+================================================== */
 
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
+}
+
+html{
     scroll-behavior:smooth;
 }
 
@@ -25,27 +45,26 @@ body{
     background:#050505;
     color:#fff;
     line-height:1.6;
+    overflow-x:hidden;
+}
+
+body.no-scroll{
+    overflow:hidden;
 }
 
 a{
     color:inherit;
     text-decoration:none;
 }
-    
-    /* SCROLL REVEAL */
-.reveal{
-    opacity:1;
-    transform:none;
-    transition:none;
-}
 
-.reveal.show{
-    opacity:1;
-    transform:translateY(0);
+button{
+    font-family:inherit;
 }
 
 
-/* ================= NAVBAR ================= */
+/* ==================================================
+   NAVBAR
+================================================== */
 
 nav{
     position:fixed;
@@ -54,72 +73,225 @@ nav{
     width:100%;
     z-index:1000;
 
-    padding:18px 7%;
+    padding:16px 7%;
 
     display:flex;
-    justify-content:space-between;
     align-items:center;
+    justify-content:space-between;
 
-    background:rgba(5,5,5,0.80);
-    backdrop-filter:blur(15px);
+    background:rgba(255,255,255,0.06);
 
-    border-bottom:1px solid #222;
+    backdrop-filter:blur(20px);
+    -webkit-backdrop-filter:blur(20px);
+
+    border-bottom:1px solid rgba(255,255,255,0.12);
+
+    box-shadow:0 8px 30px rgba(0,0,0,0.25);
 }
 
 .logo{
-    font-size:20px;
+    font-size:19px;
     font-weight:800;
     letter-spacing:2px;
 
-    text-shadow:
-        0 0 8px rgba(255,255,255,0.25);
+    white-space:nowrap;
+
+    text-shadow:0 0 12px rgba(255,255,255,0.25);
 }
 
-nav a{
-    margin-left:18px;
+.nav-links{
+    display:flex;
+    align-items:center;
+}
+
+.nav-links a{
+    margin-left:12px;
+
+    padding:8px 12px;
+
+    border-radius:12px;
+
     font-size:14px;
+
     color:#aaa;
+
     transition:0.3s;
 }
 
-nav a:hover{
+.nav-links a:hover{
     color:#fff;
 
-    text-shadow:
-        0 0 10px rgba(255,255,255,0.7);
+    background:rgba(255,255,255,0.08);
 }
 
-    /* MOBILE IMAGE FIX */
+.nav-links a.active{
+    color:#fff;
 
-.work-card{
-    height:auto !important;
-    min-height:0 !important;
-    overflow:visible !important;
-}
+    background:rgba(255,255,255,0.12);
 
-.work-card img{
-    width:100% !important;
-    height:auto !important;
-    max-height:none !important;
-    aspect-ratio:auto !important;
-    object-fit:contain !important;
-    display:block;
-}
-    
-/* ================= GLASS OS STYLE ================= */
-
-nav{
-    background:rgba(255,255,255,0.06);
-    backdrop-filter:blur(20px);
-    -webkit-backdrop-filter:blur(20px);
-    border-bottom:1px solid rgba(255,255,255,0.12);
+    border:1px solid rgba(255,255,255,0.18);
 
     box-shadow:
-        0 8px 30px rgba(0,0,0,0.25);
+        inset 0 1px 0 rgba(255,255,255,0.08);
 }
 
 
-/* GLASS CARDS */
+/* ==================================================
+   HAMBURGER
+================================================== */
+
+.menu-toggle{
+    display:none;
+
+    color:#fff;
+
+    background:rgba(255,255,255,0.08);
+
+    border:1px solid rgba(255,255,255,0.20);
+
+    font-size:23px;
+
+    padding:5px 11px;
+
+    border-radius:12px;
+
+    cursor:pointer;
+}
+
+
+/* ==================================================
+   HERO
+================================================== */
+
+.hero{
+    min-height:100vh;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+
+    padding:110px 20px 70px;
+
+    background:
+        radial-gradient(
+            circle at 50% 5%,
+            #333 0%,
+            #181818 28%,
+            #080808 62%,
+            #000 100%
+        );
+}
+
+.hero-content{
+    max-width:900px;
+}
+
+.hero h1{
+    font-size:clamp(42px,9vw,95px);
+
+    line-height:1.05;
+
+    letter-spacing:5px;
+
+    margin-bottom:18px;
+
+    text-shadow:
+        0 0 5px rgba(255,255,255,0.5),
+        0 0 20px rgba(255,255,255,0.18);
+}
+
+.hero h2{
+    font-size:18px;
+
+    font-weight:400;
+
+    color:#999;
+
+    margin-bottom:30px;
+}
+
+.hero-buttons{
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:12px;
+}
+
+
+/* ==================================================
+   BUTTONS
+================================================== */
+
+.btn{
+    display:inline-flex;
+
+    align-items:center;
+    justify-content:center;
+
+    padding:12px 23px;
+
+    border-radius:30px;
+
+    color:#fff;
+
+    background:rgba(255,255,255,0.06);
+
+    backdrop-filter:blur(15px);
+    -webkit-backdrop-filter:blur(15px);
+
+    border:1px solid rgba(255,255,255,0.25);
+
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,0.12);
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#fff;
+
+    color:#000;
+
+    transform:translateY(-2px);
+
+    box-shadow:
+        0 0 18px rgba(255,255,255,0.3);
+}
+
+
+/* ==================================================
+   SECTIONS
+================================================== */
+
+section{
+    max-width:1200px;
+
+    margin:auto;
+
+    padding:90px 7%;
+}
+
+.section-title{
+    font-size:38px;
+
+    margin-bottom:35px;
+}
+
+.section-title span{
+    color:#777;
+}
+
+
+/* ==================================================
+   GLASS CARDS
+================================================== */
 
 .about-box,
 .work-card,
@@ -141,155 +313,68 @@ nav{
 }
 
 
-/* BUTTON GLASS */
-
-.btn{
-    background:rgba(255,255,255,0.06);
-
-    backdrop-filter:blur(15px);
-    -webkit-backdrop-filter:blur(15px);
-
-    border:1px solid rgba(255,255,255,0.25);
-
-    box-shadow:
-        inset 0 1px 0 rgba(255,255,255,0.12);
-}
-
-
-/* CONTACT BUTTONS */
-
-.contact-links a{
-    background:rgba(255,255,255,0.05);
-
-    backdrop-filter:blur(12px);
-    -webkit-backdrop-filter:blur(12px);
-
-    border:1px solid rgba(255,255,255,0.12);
-}
-
-
-/* FOOTER GLASS */
-
-footer{
-    background:rgba(255,255,255,0.04);
-
-    backdrop-filter:blur(20px);
-    -webkit-backdrop-filter:blur(20px);
-
-    border-top:1px solid rgba(255,255,255,0.12);
-
-    box-shadow:
-        0 -8px 30px rgba(0,0,0,0.2);
-}
-    
-/* ================= HERO ================= */
-
-.hero{
-    min-height:100vh;
-
-    display:flex;
-    align-items:center;
-    justify-content:center;
-
-    text-align:center;
-
-    padding:100px 20px 60px;
-
-    background:
-        radial-gradient(
-            circle at 50% 5%,
-            #303030 0%,
-            #161616 28%,
-            #080808 60%,
-            #000000 100%
-        );
-}
-
-.hero h1{
-    font-size:clamp(40px,12vw,100px);
-
-    letter-spacing:5px;
-    line-height:1.05;
-
-    margin-bottom:20px;
-
-    color:#fff;
-
-    text-shadow:
-        0 0 5px rgba(255,255,255,0.5),
-        0 0 15px rgba(255,255,255,0.25);
-}
-
-.hero h2{
-    font-size:18px;
-    color:#999;
-    font-weight:400;
-
-    margin-bottom:30px;
-}
-
-.btn{
-    display:inline-block;
-
-    padding:13px 26px;
-
-    border:1px solid #fff;
-    border-radius:30px;
-
-    color:#fff;
-
-    transition:0.3s;
-}
-
-.btn:hover{
-    background:#fff;
-    color:#000;
-
-    box-shadow:
-        0 0 15px rgba(255,255,255,0.4);
-}
-
-
-/* ================= SECTIONS ================= */
-
-section{
-    padding:90px 7%;
-    max-width:1200px;
-    margin:auto;
-
-    background:transparent;
-}
-
-.section-title{
-    font-size:38px;
-    margin-bottom:35px;
-}
-
-.section-title span{
-    color:#777;
-}
-
-
-/* ================= ABOUT ================= */
+/* ==================================================
+   ABOUT
+================================================== */
 
 .about-box{
     padding:30px;
 
-    background:#111;
-
-    border:1px solid #252525;
     border-radius:20px;
 
     color:#bbb;
 
     font-size:15px;
+}
 
-    box-shadow:
-        0 10px 40px rgba(0,0,0,0.25);
+.about-box p{
+    white-space:pre-line;
 }
 
 
-/* ================= WORK ================= */
+/* ==================================================
+   PORTFOLIO FILTER
+================================================== */
+
+.filter-buttons{
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:10px;
+
+    margin-bottom:25px;
+}
+
+.filter-btn{
+    padding:9px 18px;
+
+    border-radius:25px;
+
+    color:#aaa;
+
+    background:rgba(255,255,255,0.05);
+
+    border:1px solid rgba(255,255,255,0.12);
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+.filter-btn:hover,
+.filter-btn.active{
+    background:#fff;
+
+    color:#000;
+
+    border-color:#fff;
+}
+
+
+/* ==================================================
+   WORK GRID
+================================================== */
 
 .work-grid{
     display:grid;
@@ -300,37 +385,85 @@ section{
 }
 
 .work-card{
-    background:rgba(255,255,255,0.055);
-    backdrop-filter:blur(18px);
-    -webkit-backdrop-filter:blur(18px);
-    border:1px solid rgba(255,255,255,0.12);
-    border-radius:20px;
     padding:12px;
+
+    border-radius:20px;
+
     overflow:hidden;
-    box-shadow:
-        inset 0 1px 0 rgba(255,255,255,0.08),
-        0 10px 35px rgba(0,0,0,0.25);
+
+    cursor:pointer;
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+
+    animation:cardIn 0.35s ease;
 }
 
 .work-card:hover{
-    transform:translateY(-5px);
+    transform:translateY(-6px);
 
     border-color:#555;
 
     box-shadow:
-        0 10px 30px rgba(255,255,255,0.08);
+        0 15px 35px rgba(255,255,255,0.08);
+}
+
+.work-card.hidden{
+    display:none;
 }
 
 .work-card img{
     width:100%;
+
     height:auto;
+
+    max-width:100%;
+
     display:block;
+
     object-fit:contain;
+
     border-radius:14px;
+
+    background:#0c0c0c;
+}
+
+.work-info{
+    padding:13px 5px 4px;
+}
+
+.work-info h3{
+    font-size:15px;
+
+    margin-bottom:3px;
+}
+
+.work-info p{
+    color:#777;
+
+    font-size:12px;
+}
+
+@keyframes cardIn{
+
+    from{
+        opacity:0;
+        transform:scale(0.97);
+    }
+
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
+
 }
 
 
-/* ================= SERVICES ================= */
+/* ==================================================
+   SERVICES
+================================================== */
 
 .services{
     display:grid;
@@ -341,10 +474,6 @@ section{
 }
 
 .service{
-    background:#111;
-
-    border:1px solid #252525;
-
     padding:30px 20px;
 
     border-radius:18px;
@@ -364,78 +493,96 @@ section{
 
 .service p{
     color:#888;
+
     font-size:14px;
 }
 
-/* ================= PRICING ================= */
+
+/* ==================================================
+   PRICING
+================================================== */
+
 .pricing{
     display:grid;
+
     grid-template-columns:repeat(3,1fr);
+
     gap:18px;
 }
 
 .price-card{
-    background:#111;
-    border:1px solid #292929;
-    border-radius:20px;
     padding:30px 20px;
+
+    border-radius:20px;
+
     text-align:center;
-    transition:.3s;
+
+    transition:0.3s;
 }
 
 .price-card:hover{
     transform:translateY(-7px);
+
     border-color:#555;
 }
 
 .price-card h3{
-    font-size:20px;
-    margin-bottom:15px;
+    font-size:19px;
+
+    margin-bottom:12px;
 }
 
 .price{
     font-size:30px;
+
     font-weight:700;
+
     margin-bottom:8px;
 }
 
 .price span{
     font-size:13px;
+
     color:#777;
-    font-weight:400;
 }
 
 .price-card p{
     color:#888;
+
     font-size:14px;
 }
 
 
-/* ================= STATS ================= */
+/* ==================================================
+   STATS
+================================================== */
 
 .stats{
     display:grid;
+
     grid-template-columns:repeat(2,1fr);
+
     gap:25px;
-    margin-top:25px;
 }
 
 .stat-card{
-    background:#111;
-    border:1px solid #292929;
-    border-radius:20px;
     padding:30px 20px;
+
+    border-radius:20px;
+
     text-align:center;
 }
 
 .circle{
     width:150px;
     height:150px;
+
     margin:0 auto 20px;
 
     border-radius:50%;
 
     display:flex;
+
     align-items:center;
     justify-content:center;
 
@@ -450,20 +597,24 @@ section{
 
 .circle::before{
     content:"";
+
     position:absolute;
 
     width:120px;
     height:120px;
 
     background:#111;
+
     border-radius:50%;
 }
 
 .circle span{
     position:relative;
+
     z-index:2;
 
     font-size:28px;
+
     font-weight:700;
 }
 
@@ -473,37 +624,21 @@ section{
 
 .stat-card p{
     color:#888;
+
     font-size:14px;
 }
 
 
-/* MOBILE */
-
-@media(max-width:700px){
-
-    .pricing{
-        grid-template-columns:1fr;
-    }
-
-    .stats{
-        grid-template-columns:1fr;
-    }
-
-}
-
-
-/* ================= CONTACT ================= */
+/* ==================================================
+   CONTACT
+================================================== */
 
 .contact-box{
-    text-align:center;
-
     padding:45px 20px;
 
-    background:#111;
-
-    border:1px solid #252525;
-
     border-radius:20px;
+
+    text-align:center;
 }
 
 .contact-box p{
@@ -523,13 +658,18 @@ section{
 }
 
 .contact-links a{
-    border:1px solid #333;
-
     padding:11px 20px;
 
     border-radius:25px;
 
     color:#ccc;
+
+    background:rgba(255,255,255,0.05);
+
+    backdrop-filter:blur(12px);
+    -webkit-backdrop-filter:blur(12px);
+
+    border:1px solid rgba(255,255,255,0.12);
 
     transition:0.3s;
 }
@@ -538,30 +678,132 @@ section{
     background:#fff;
 
     color:#000;
-
-    box-shadow:
-        0 0 15px rgba(255,255,255,0.3);
 }
 
 
-/* ================= FOOTER ================= */
+/* ==================================================
+   FOOTER
+================================================== */
 
 footer{
-    text-align:center;
-
     padding:30px 15px;
 
-    border-top:1px solid #222;
+    text-align:center;
 
     color:#666;
 
     font-size:13px;
 
-    background:#050505;
+    background:rgba(255,255,255,0.04);
+
+    backdrop-filter:blur(20px);
+    -webkit-backdrop-filter:blur(20px);
+
+    border-top:1px solid rgba(255,255,255,0.12);
 }
 
 
-/* ================= MOBILE ================= */
+/* ==================================================
+   LIGHTBOX
+================================================== */
+
+.lightbox{
+    position:fixed;
+
+    inset:0;
+
+    z-index:2000;
+
+    display:none;
+
+    align-items:center;
+    justify-content:center;
+
+    padding:25px;
+
+    background:rgba(0,0,0,0.90);
+
+    backdrop-filter:blur(12px);
+    -webkit-backdrop-filter:blur(12px);
+}
+
+.lightbox.active{
+    display:flex;
+}
+
+.lightbox img{
+    max-width:94vw;
+
+    max-height:88vh;
+
+    width:auto;
+    height:auto;
+
+    object-fit:contain;
+
+    border-radius:12px;
+
+    box-shadow:
+        0 20px 70px rgba(0,0,0,0.7);
+}
+
+.lightbox-close{
+    position:absolute;
+
+    top:18px;
+    right:20px;
+
+    width:45px;
+    height:45px;
+
+    border-radius:50%;
+
+    border:1px solid rgba(255,255,255,0.25);
+
+    background:rgba(255,255,255,0.10);
+
+    color:#fff;
+
+    font-size:25px;
+
+    cursor:pointer;
+}
+
+.lightbox-title{
+    position:absolute;
+
+    bottom:18px;
+    left:20px;
+    right:20px;
+
+    text-align:center;
+
+    color:#aaa;
+
+    font-size:13px;
+}
+
+
+/* ==================================================
+   SHARE BOX
+================================================== */
+
+.share-box{
+    margin-top:25px;
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:10px;
+}
+
+
+/* ==================================================
+   MOBILE
+================================================== */
 
 @media(max-width:700px){
 
@@ -569,26 +811,72 @@ footer{
         padding:15px 5%;
     }
 
-    nav .links{
-        display:none;
+    .logo{
+        font-size:15px;
+        letter-spacing:1.5px;
     }
 
-    .logo{
-        font-size:16px;
+    .menu-toggle{
+        display:block;
+    }
+
+    .nav-links{
+        display:none;
+
+        position:absolute;
+
+        top:68px;
+
+        left:15px;
+        right:15px;
+
+        padding:15px;
+
+        flex-direction:column;
+
+        align-items:stretch;
+
+        gap:4px;
+
+        background:rgba(20,20,20,0.94);
+
+        backdrop-filter:blur(20px);
+        -webkit-backdrop-filter:blur(20px);
+
+        border:1px solid rgba(255,255,255,0.12);
+
+        border-radius:18px;
+    }
+
+    .nav-links.active{
+        display:flex;
+    }
+
+    .nav-links a{
+        width:100%;
+
+        margin-left:0;
+
+        padding:12px;
     }
 
     section{
         padding:75px 5%;
     }
 
-    .hero h1{
-        font-size:45px;
+    .hero{
+        padding-left:18px;
+        padding-right:18px;
+    }
 
-        letter-spacing:3px;
+    .hero h1{
+        font-size:43px;
+
+        letter-spacing:2px;
     }
 
     .hero h2{
-        font-size:16px;
+        font-size:15px;
     }
 
     .work-grid{
@@ -596,10 +884,32 @@ footer{
     }
 
     .work-card{
-        height:280px;
+        height:auto !important;
+
+        min-height:0 !important;
+    }
+
+    .work-card img{
+        width:100% !important;
+
+        height:auto !important;
+
+        max-height:none !important;
+
+        aspect-ratio:auto !important;
+
+        object-fit:contain !important;
     }
 
     .services{
+        grid-template-columns:1fr;
+    }
+
+    .pricing{
+        grid-template-columns:1fr;
+    }
+
+    .stats{
         grid-template-columns:1fr;
     }
 
@@ -607,61 +917,59 @@ footer{
         font-size:30px;
     }
 
-}
-
-    /* MOBILE HAMBURGER MENU */
-
-.menu-toggle{
-    display:none;
-    background:rgba(255,255,255,0.08);
-    border:1px solid rgba(255,255,255,0.2);
-    color:#fff;
-    font-size:24px;
-    padding:6px 12px;
-    border-radius:12px;
-    cursor:pointer;
-}
-
-@media(max-width:768px){
-
-    .menu-toggle{
-        display:block;
+    .about-box{
+        padding:23px;
     }
 
-    nav .nav-links{
-        display:none;
-        position:absolute;
-        top:70px;
-        left:15px;
-        right:15px;
-        padding:15px;
-        flex-direction:column;
-        gap:5px;
-        background:rgba(20,20,20,0.85);
-        backdrop-filter:blur(20px);
-        -webkit-backdrop-filter:blur(20px);
-        border:1px solid rgba(255,255,255,0.12);
-        border-radius:18px;
-    }
-
-    nav .nav-links.active{
-        display:flex;
-    }
-
-    nav .nav-links a{
-        width:100%;
+    .lightbox{
         padding:12px;
-        border-radius:12px;
     }
-        }
-    
-    /* ACTIVE NAVBAR TAB */
 
-.nav-links a.active{
-    background:rgba(255,255,255,0.12);
-    border:1px solid rgba(255,255,255,0.18);
-    box-shadow:inset 0 1px 0 rgba(255,255,255,0.08);
+    .lightbox img{
+        max-width:96vw;
+        max-height:82vh;
     }
+
+}
+
+
+/* ==================================================
+   SMALL PHONE
+================================================== */
+
+@media(max-width:380px){
+
+    .hero h1{
+        font-size:36px;
+    }
+
+    .logo{
+        font-size:13px;
+    }
+
+    .section-title{
+        font-size:27px;
+    }
+
+}
+
+
+/* ==================================================
+   ACCESSIBILITY
+================================================== */
+
+@media(prefers-reduced-motion:reduce){
+
+    html{
+        scroll-behavior:auto;
+    }
+
+    *{
+        transition:none !important;
+        animation:none !important;
+    }
+
+}
 
 </style>
 
@@ -671,55 +979,87 @@ footer{
 <body>
 
 
-<!-- ================= NAVBAR ================= -->
+<!-- ==================================================
+     NAVBAR
+================================================== -->
 
- <nav>
+<nav>
 
     <div class="logo">
         CFG TAMILAN
     </div>
 
-    <button class="menu-toggle" id="menuToggle">☰</button>
+    <button
+        class="menu-toggle"
+        id="menuToggle"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-expanded="false">
+        ☰
+    </button>
 
-    <div class="nav-links">
+    <div class="nav-links" id="navLinks">
+
         <a href="#home">Home</a>
+
         <a href="#about">About</a>
+
         <a href="#work">Work</a>
+
         <a href="#services">Services</a>
+
         <a href="#pricing">Prices</a>
+
         <a href="#stats">Journey</a>
+
         <a href="#contact">Contact</a>
+
     </div>
 
- </nav>
+</nav>
 
 
-<!-- ================= HERO ================= -->
+<!-- ==================================================
+     HERO
+================================================== -->
 
 <header class="hero" id="home">
 
-    <div>
+    <div class="hero-content">
 
         <h1>
-            CFG TAMILAN DESIGNS
+            CFG TAMILAN
         </h1>
 
         <h2>
-            Logo Designer • Bala !!
+            Creative Designer • Logo • Photo • Video
         </h2>
 
-        <a href="#work" class="btn">
-            View My Work 🫶
-        </a>
+        <div class="hero-buttons">
+
+            <a href="#work" class="btn">
+                View My Work 🫶
+            </a>
+
+            <button
+                class="btn"
+                id="heroShare"
+                type="button">
+                Share Website
+            </button>
+
+        </div>
 
     </div>
 
 </header>
 
 
-<!-- ================= ABOUT ================= -->
+<!-- ==================================================
+     ABOUT
+================================================== -->
 
-<section id="about" class="reveal">
+<section id="about">
 
     <h2 class="section-title">
         About <span>me</span>
@@ -728,33 +1068,27 @@ footer{
     <div class="about-box">
 
         <p>
-
 Hey, I'm Bala! 👋
 
 Your Creative Partner for Affordable Digital Designs
 
-I'm Bala, a 17-year-old freelance mobile editor passionate about turning creative ideas into eye-catching digital designs. I specialize in creating stunning visuals at affordable prices, helping individuals, creators, and businesses bring their ideas to life.
+I'm Bala, a freelance mobile editor passionate about turning creative ideas into eye-catching digital designs.
+
+I specialize in creating stunning visuals at affordable prices, helping individuals, creators, and businesses bring their ideas to life.
 
 From unique logos and professional posters to attractive banners and creative photo edits, I focus on delivering designs that match your vision and stand out from the crowd.
 
 What I Do
 
-- 🎨 Logo & Brand Design
-- 🖼️ Poster & Banner Design
-- 📸 Creative Photo Editing
-- 📱 Social Media Graphics
-- ✨ Custom Designs & Much More
+🎨 Logo & Brand Design
+🖼️ Poster & Banner Design
+📸 Creative Photo Editing
+📱 Social Media Graphics
+✨ Custom Designs & Much More
 
-        </p>
-
-        <br>
-
-        <p>
-            My Mission
+My Mission
 
 My goal is to provide creative, high-quality, and affordable editing services while making professional-looking designs accessible to everyone.
-
-I believe every idea deserves to look amazing — and I'm here to make that happen!
 
 Creative Ideas. Stunning Designs. Affordable Prices.
 
@@ -766,61 +1100,248 @@ Let's turn your vision into something extraordinary! 🚀
 </section>
 
 
-<!-- ================= WORK ================= -->
+<!-- ==================================================
+     WORK
+================================================== -->
 
-<section id="work" class="reveal">
+<section id="work">
 
     <h2 class="section-title">
         My <span>Work</span>
     </h2>
 
+
+    <!-- FILTER BUTTONS -->
+
+    <div class="filter-buttons">
+
+        <button
+            class="filter-btn active"
+            type="button"
+            data-filter="all">
+            All
+        </button>
+
+        <button
+            class="filter-btn"
+            type="button"
+            data-filter="logo">
+            Logos
+        </button>
+
+        <button
+            class="filter-btn"
+            type="button"
+            data-filter="poster">
+            Posters
+        </button>
+
+        <button
+            class="filter-btn"
+            type="button"
+            data-filter="photo">
+            Photo
+        </button>
+
+        <button
+            class="filter-btn"
+            type="button"
+            data-filter="video">
+            Video
+        </button>
+
+    </div>
+
+
     <div class="work-grid">
 
 
-        <!-- LOGO 01 -->
+        <!-- WORK 01 -->
 
-        <div class="work-card">
+        <div
+            class="work-card"
+            data-category="logo"
+            data-title="Logo Design 01">
 
             <img
                 src="IMG_20251128_094144_751.webp"
                 alt="Logo Design 01"
-            >
+                loading="lazy"
+                onerror="this.style.display='none';">
+
+            <div class="work-info">
+
+                <h3>
+                    Logo Design 01
+                </h3>
+
+                <p>
+                    Creative Logo
+                </p>
+
+            </div>
 
         </div>
 
 
-        <!-- LOGO 02 -->
+        <!-- WORK 02 -->
 
-        <div class="work-card">
+        <div
+            class="work-card"
+            data-category="logo"
+            data-title="Logo Design 02">
 
             <img
                 src="Picsart_26-04-17_15-13-08-475.jpg"
                 alt="Logo Design 02"
-            >
+                loading="lazy"
+                onerror="this.style.display='none';">
+
+            <div class="work-info">
+
+                <h3>
+                    Logo Design 02
+                </h3>
+
+                <p>
+                    Brand Logo
+                </p>
+
+            </div>
 
         </div>
 
 
-        <!-- LOGO 03 -->
+        <!-- WORK 03 -->
 
-        <div class="work-card">
+        <div
+            class="work-card"
+            data-category="logo"
+            data-title="Logo Design 03">
 
             <img
                 src="Picsart_26-04-20_01-01-14-338.jpg"
                 alt="Logo Design 03"
-            >
+                loading="lazy"
+                onerror="this.style.display='none';">
+
+            <div class="work-info">
+
+                <h3>
+                    Logo Design 03
+                </h3>
+
+                <p>
+                    Modern Logo
+                </p>
+
+            </div>
 
         </div>
 
 
-        <!-- LOGO 04 -->
+        <!-- WORK 04 -->
 
-        <div class="work-card">
+        <div
+            class="work-card"
+            data-category="logo"
+            data-title="Logo Design 04">
 
             <img
                 src="Untitled1 (1).png"
                 alt="Logo Design 04"
-            >
+                loading="lazy"
+                onerror="this.style.display='none';">
+
+            <div class="work-info">
+
+                <h3>
+                    Logo Design 04
+                </h3>
+
+                <p>
+                    Creative Branding
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- SAMPLE POSTER CARD -->
+
+        <div
+            class="work-card"
+            data-category="poster"
+            data-title="Poster Designs">
+
+            <div
+                style="
+                min-height:180px;
+                display:flex;
+                align-items:center;
+                justify-content:center;
+                text-align:center;
+                border-radius:14px;
+                background:#111;
+                color:#777;
+                padding:20px;
+                ">
+
+                Add your poster here
+
+            </div>
+
+            <div class="work-info">
+
+                <h3>
+                    Poster Design
+                </h3>
+
+                <p>
+                    Add your poster image to GitHub
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- SAMPLE PHOTO CARD -->
+
+        <div
+            class="work-card"
+            data-category="photo"
+            data-title="Photo Editing">
+
+            <div
+                style="
+                min-height:180px;
+                display:flex;
+                align-items:center;
+                justify-content:center;
+                text-align:center;
+                border-radius:14px;
+                background:#111;
+                color:#777;
+                padding:20px;
+                ">
+
+                Add your photo edit here
+
+            </div>
+
+            <div class="work-info">
+
+                <h3>
+                    Photo Editing
+                </h3>
+
+                <p>
+                    Add your edited photo to GitHub
+                </p>
+
+            </div>
 
         </div>
 
@@ -830,9 +1351,11 @@ Let's turn your vision into something extraordinary! 🚀
 </section>
 
 
-<!-- ================= SERVICES ================= -->
+<!-- ==================================================
+     SERVICES
+================================================== -->
 
-<section id="services" class="reveal">
+<section id="services">
 
     <h2 class="section-title">
         » <span>Services</span>
@@ -862,8 +1385,8 @@ Let's turn your vision into something extraordinary! 🚀
             </h3>
 
             <p>
-                Professional posters and social media
-                creatives for your brand.
+                Professional posters and social
+                media creatives.
             </p>
 
         </div>
@@ -883,226 +1406,20 @@ Let's turn your vision into something extraordinary! 🚀
         </div>
 
 
-    </div>
+        <div class="service">
 
-</section>
-
-
-<!-- ================= PRICING ================= -->
-
-    <section id="pricing" class="reveal">
-
-    <h2 class="section-title">
-        Starting <span>Prices</span>
-    </h2>
-
-    <div class="pricing">
-
-        <div class="price-card">
-            <h3>🎨 Logo Design</h3>
-
-            <div class="price">
-                ₹499 <span>+</span>
-            </div>
+            <h3>
+                📸 Photo Editing
+            </h3>
 
             <p>
-                Creative & professional logo designs
-            </p>
-        </div>
-
-
-        <div class="price-card">
-            <h3>🖼️ Photo Editing</h3>
-
-            <div class="price">
-                ₹199 <span>+</span>
-            </div>
-
-            <p>
-                Professional photo editing & retouching
-            </p>
-        </div>
-
-
-        <div class="price-card">
-            <h3>🎬 Video Editing</h3>
-
-            <div class="price">
-                ₹499 <span>+</span>
-            </div>
-
-            <p>
-                Creative edits for social media
-            </p>
-        </div>
-
-
-        <div class="price-card">
-            <h3>🖼️ Poster Editing</h3>
-
-            <div class="price">
-                ₹299 <span>+</span>
-            </div>
-
-            <p>
-                Creative and professional poster editing
-            </p>
-        </div>
-
-
-        <div class="price-card">
-            <h3>📢 Banner Editing</h3>
-
-            <div class="price">
-                ₹299 <span>+</span>
-            </div>
-
-            <p>
-                Attractive banner designs for brands
-            </p>
-        </div>
-
-    </div>
-
-    </section>
-
-<!-- ================= OUR ORDERS ================= -->
-
-<section id="stats" class="reveal">
-
-    <h2 class="section-title">
-        Our <span>Journey</span>
-    </h2>
-
-    <div class="stats">
-
-        <div class="stat-card">
-
-            <div class="circle">
-                <span>25+</span>
-            </div>
-
-            <h3>Orders Completed</h3>
-
-            <p>
-                Successfully completed projects
+                Clean and creative photo editing
+                for your personal or brand content.
             </p>
 
         </div>
 
 
-        <div class="stat-card">
+        <div class="service">
 
-            <div class="circle">
-                <span>92%</span>
-            </div>
-
-            <h3>Customer Satisfaction</h3>
-
-            <p>
-                Customers satisfied with our work
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-<!-- ================= CONTACT ================= -->
-
-<section id="contact" class="reveal">
-
-    <h2 class="section-title">
-        Contact <span>me</span>
-    </h2>
-
-    <div class="contact-box">
-
-        <p>
-            Have a dream idea ? Let's make it real.
-        </p>
-
-        <div class="contact-links">
-
-
-            <a
-                href="https://instagram.com/YOUR_USERNAME"
-                target="_blank"
-            >
-                Instagram
-            </a>
-
-
-            <a
-                href="https://wa.me/917010144546"
-                target="_blank"
-            >
-                WhatsApp
-            </a>
-
-
-            <a
-                href="mailto:tamilangamingofficial059@gmail.com"
-            >
-                Email
-            </a>
-
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ================= FOOTER ================= -->
-
-<footer>
-
-    © 2026 CFG TAMILAN DESIGNS.
-    All Rights Reserved.
-
-</footer>
-
-<script>
-
-    // Scroll Reveal code
-    // ...
-
-    // Hamburger Menu code
-    const menuToggle = document.getElementById("menuToggle");
-    const navLinks = document.querySelector(".nav-links");
-
-    menuToggle.addEventListener("click", () => {
-        navLinks.classList.toggle("active");
-    });
-
-
-    // Active Navbar code
-    const navItems = document.querySelectorAll(".nav-links a");
-    const sections = document.querySelectorAll("section[id]");
-
-    window.addEventListener("scroll", () => {
-        let current = "";
-
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop - 120;
-            if (window.scrollY >= sectionTop) {
-                current = section.getAttribute("id");
-            }
-        });
-
-        navItems.forEach(item => {
-            item.classList.remove("active");
-
-            if (item.getAttribute("href") === "#" + current) {
-                item.classList.add("active");
-            }
-        });
-    });
-
-</script>
-
-</body>
-</html>
+            <h
