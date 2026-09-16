@@ -266,6 +266,131 @@ section{
     font-size:14px;
 }
 
+/* ================= PRICING ================= */
+
+.pricing{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+}
+
+.price-card{
+    background:#111;
+    border:1px solid #292929;
+    border-radius:20px;
+    padding:30px 20px;
+    text-align:center;
+    transition:.3s;
+}
+
+.price-card:hover{
+    transform:translateY(-7px);
+    border-color:#555;
+}
+
+.price-card h3{
+    font-size:20px;
+    margin-bottom:15px;
+}
+
+.price{
+    font-size:30px;
+    font-weight:700;
+    margin-bottom:8px;
+}
+
+.price span{
+    font-size:13px;
+    color:#777;
+    font-weight:400;
+}
+
+.price-card p{
+    color:#888;
+    font-size:14px;
+}
+
+
+/* ================= STATS ================= */
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:25px;
+    margin-top:25px;
+}
+
+.stat-card{
+    background:#111;
+    border:1px solid #292929;
+    border-radius:20px;
+    padding:30px 20px;
+    text-align:center;
+}
+
+.circle{
+    width:150px;
+    height:150px;
+    margin:0 auto 20px;
+
+    border-radius:50%;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    background:
+        conic-gradient(
+            #fff 0% 92%,
+            #292929 92% 100%
+        );
+
+    position:relative;
+}
+
+.circle::before{
+    content:"";
+    position:absolute;
+
+    width:120px;
+    height:120px;
+
+    background:#111;
+    border-radius:50%;
+}
+
+.circle span{
+    position:relative;
+    z-index:2;
+
+    font-size:28px;
+    font-weight:700;
+}
+
+.stat-card h3{
+    margin-bottom:5px;
+}
+
+.stat-card p{
+    color:#888;
+    font-size:14px;
+}
+
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+    .pricing{
+        grid-template-columns:1fr;
+    }
+
+    .stats{
+        grid-template-columns:1fr;
+    }
+
+}
+
 
 /* ================= CONTACT ================= */
 
@@ -610,6 +735,108 @@ Let's turn your vision into something extraordinary! 🚀
 
 </section>
 
+
+<!-- ================= PRICING ================= -->
+
+<section id="pricing">
+
+    <h2 class="section-title">
+        Starting <span>Prices</span>
+    </h2>
+
+    <div class="pricing">
+
+        <div class="price-card">
+
+            <h3>🎨 Logo Design</h3>
+
+            <div class="price">
+                ₹499 <span>+</span>
+            </div>
+
+            <p>
+                Creative & professional logo designs
+            </p>
+
+        </div>
+
+
+        <div class="price-card">
+
+            <h3>🖼️ Photo Editing</h3>
+
+            <div class="price">
+                ₹199 <span>+</span>
+            </div>
+
+            <p>
+                Professional photo editing & retouching
+            </p>
+
+        </div>
+
+
+        <div class="price-card">
+
+            <h3>🎬 Video Editing</h3>
+
+            <div class="price">
+                ₹499 <span>+</span>
+            </div>
+
+            <p>
+                Creative edits for social media
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= OUR ORDERS ================= -->
+
+<section id="stats">
+
+    <h2 class="section-title">
+        Our <span>Journey</span>
+    </h2>
+
+    <div class="stats">
+
+        <div class="stat-card">
+
+            <div class="circle">
+                <span>25+</span>
+            </div>
+
+            <h3>Orders Completed</h3>
+
+            <p>
+                Successfully completed projects
+            </p>
+
+        </div>
+
+
+        <div class="stat-card">
+
+            <div class="circle">
+                <span>92%</span>
+            </div>
+
+            <h3>Customer Satisfaction</h3>
+
+            <p>
+                Customers satisfied with our work
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
 
 <!-- ================= CONTACT ================= -->
 
