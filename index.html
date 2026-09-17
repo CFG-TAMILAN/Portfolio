@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,8 +19,6 @@ content="CFG TAMILAN DESIGNS - Creative Logo, Poster, Photo and Video Editing Po
 rel="stylesheet">
 
 <style>
-
-/* ================= RESET ================= */
 
 *{
     margin:0;
@@ -262,7 +261,11 @@ section{
 .service,
 .price-card,
 .stat-card,
-.contact-box{
+.contact-box,
+.tool-card,
+.why-card,
+.process-card,
+.faq-item{
 
     background:rgba(255,255,255,0.055);
 
@@ -415,13 +418,13 @@ section{
 
 .services{
     display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:18px;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
 }
 
 .service{
-    padding:30px 20px;
-    border-radius:18px;
+    padding:35px 25px;
+    border-radius:20px;
     transition:0.3s;
 }
 
@@ -431,12 +434,49 @@ section{
 }
 
 .service h3{
-    margin-bottom:10px;
+    font-size:20px;
+    margin-bottom:12px;
 }
 
 .service p{
     color:#888;
     font-size:14px;
+}
+
+
+/* ================= TOOLS ================= */
+
+.tools-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.tool-card{
+    padding:28px 18px;
+    border-radius:20px;
+    text-align:center;
+    transition:0.3s;
+}
+
+.tool-card:hover{
+    transform:translateY(-7px);
+    border-color:#555;
+}
+
+.tool-icon{
+    font-size:32px;
+    margin-bottom:12px;
+}
+
+.tool-card h3{
+    font-size:18px;
+    margin-bottom:7px;
+}
+
+.tool-card p{
+    color:#888;
+    font-size:13px;
 }
 
 
@@ -482,6 +522,36 @@ section{
 .price-card p{
     color:#888;
     font-size:14px;
+}
+
+
+/* ================= WHY CHOOSE ME ================= */
+
+.why-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.why-card{
+    padding:28px 22px;
+    border-radius:20px;
+    transition:0.3s;
+}
+
+.why-card:hover{
+    transform:translateY(-7px);
+    border-color:#555;
+}
+
+.why-card h3{
+    font-size:18px;
+    margin-bottom:8px;
+}
+
+.why-card p{
+    color:#888;
+    font-size:13px;
 }
 
 
@@ -551,6 +621,108 @@ section{
 .stat-card p{
     color:#888;
     font-size:14px;
+}
+
+
+/* ================= WORK PROCESS ================= */
+
+.process-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.process-card{
+    padding:28px 22px;
+    border-radius:20px;
+    transition:0.3s;
+}
+
+.process-card:hover{
+    transform:translateY(-7px);
+    border-color:#555;
+}
+
+.process-number{
+    color:#777;
+    font-size:13px;
+    font-weight:700;
+    margin-bottom:8px;
+}
+
+.process-card h3{
+    font-size:18px;
+    margin-bottom:8px;
+}
+
+.process-card p{
+    color:#888;
+    font-size:13px;
+}
+
+
+/* ================= FAQ ================= */
+
+.faq-list{
+    max-width:900px;
+    margin:auto;
+}
+
+.faq-item{
+    border-radius:16px;
+    overflow:hidden;
+    margin-bottom:12px;
+}
+
+.faq-question{
+    width:100%;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    padding:18px 20px;
+
+    background:transparent;
+    border:none;
+
+    color:#fff;
+
+    text-align:left;
+
+    font-size:14px;
+    font-weight:600;
+
+    cursor:pointer;
+}
+
+.faq-icon{
+    color:#aaa;
+    font-size:22px;
+    transition:0.3s;
+}
+
+.faq-answer{
+    max-height:0;
+    overflow:hidden;
+
+    padding:0 20px;
+
+    color:#888;
+    font-size:13px;
+
+    transition:
+    max-height 0.3s ease,
+    padding 0.3s ease;
+}
+
+.faq-item.open .faq-answer{
+    max-height:150px;
+    padding:0 20px 18px;
+}
+
+.faq-item.open .faq-icon{
+    transform:rotate(45deg);
 }
 
 
@@ -647,9 +819,7 @@ footer{
 }
 
 
-/* ==================================================
-   LIGHTBOX
-================================================== */
+/* ================= LIGHTBOX ================= */
 
 .lightbox{
     position:fixed;
@@ -819,7 +989,10 @@ footer{
         object-fit:contain !important;
     }
 
-    .services{
+    .services,
+    .tools-grid,
+    .why-grid,
+    .process-grid{
         grid-template-columns:1fr;
     }
 
@@ -911,9 +1084,17 @@ footer{
 
         <a href="#services">Services</a>
 
+        <a href="#tools">Tools</a>
+
         <a href="#pricing">Prices</a>
 
+        <a href="#why">Why Me</a>
+
         <a href="#stats">Journey</a>
+
+        <a href="#process">Process</a>
+
+        <a href="#faq">FAQ</a>
 
         <a href="#contact">Contact</a>
 
@@ -1242,12 +1423,13 @@ Let's turn your vision into something extraordinary! 🚀
         <div class="service">
 
             <h3>
-                🎨 Logo Design
+                🎨 Design & Branding
             </h3>
 
             <p>
-                Modern, creative and professional
-                logo designs for brands.
+                Logo Design, Poster Design, Banner Design,
+                Thumbnail Design, Visiting Card Design
+                and creative social media graphics.
             </p>
 
         </div>
@@ -1256,68 +1438,99 @@ Let's turn your vision into something extraordinary! 🚀
         <div class="service">
 
             <h3>
-                🖼️ Poster Design
+                🎬 Photo & Video Editing
             </h3>
 
             <p>
-                Professional posters and social
-                media creatives.
+                Creative Photo Editing, Video Editing,
+                Reels, social media content and
+                custom visual edits.
             </p>
 
         </div>
 
 
-        <div class="service">
+    </div>
+
+</section>
+
+
+<!-- ==================================================
+     TOOLS I USE
+================================================== -->
+
+<section id="tools">
+
+    <h2 class="section-title">
+        Tools I <span>Use</span>
+    </h2>
+
+    <div class="tools-grid">
+
+
+        <div class="tool-card">
+
+            <div class="tool-icon">
+                🎨
+            </div>
 
             <h3>
-                🎬 Video Editing
+                PicsArt
             </h3>
 
             <p>
-                Creative video edits for Instagram,
-                YouTube and social media.
+                Photo & graphic editing
             </p>
 
         </div>
 
 
-        <div class="service">
+        <div class="tool-card">
+
+            <div class="tool-icon">
+                🖌️
+            </div>
 
             <h3>
-                📸 Photo Editing
+                Ibis Paint X
             </h3>
 
             <p>
-                Clean and creative photo editing
-                for personal or brand content.
+                Digital drawing & creative editing
             </p>
 
         </div>
 
 
-        <div class="service">
+        <div class="tool-card">
+
+            <div class="tool-icon">
+                🖼️
+            </div>
 
             <h3>
-                💥 Thumbnail editing 
+                Canva
             </h3>
 
             <p>
-                Attractive thumbnail for
-                creators in social media.
+                Posters, banners & social media designs
             </p>
 
         </div>
 
 
-        <div class="service">
+        <div class="tool-card">
+
+            <div class="tool-icon">
+                🎬
+            </div>
 
             <h3>
-                ✨ Custom Design
+                CapCut
             </h3>
 
             <p>
-                Have a unique idea? Let's turn it
-                into a creative design.
+                Video & Reels editing
             </p>
 
         </div>
@@ -1348,11 +1561,11 @@ Let's turn your vision into something extraordinary! 🚀
             </h3>
 
             <div class="price">
-                ₹149 - ₹399<span>+</span>
+                ₹199 - ₹399
             </div>
 
             <p>
-                Creative & professional logo designs
+                Custom creative logo designs
             </p>
 
         </div>
@@ -1361,45 +1574,11 @@ Let's turn your vision into something extraordinary! 🚀
         <div class="price-card">
 
             <h3>
-                📸 Photo Editing
+                🖼️ Poster Design
             </h3>
 
             <div class="price">
-                ₹99 - ₹199<span>+</span>
-            </div>
-
-            <p>
-                Professional photo editing
-            </p>
-
-        </div>
-
-
-        <div class="price-card">
-
-            <h3>
-                🎬 Video Editing
-            </h3>
-
-            <div class="price">
-                ₹249 - ₹449<span>+</span>
-            </div>
-
-            <p>
-                Creative social media edits
-            </p>
-
-        </div>
-
-
-        <div class="price-card">
-
-            <h3>
-                🖼️ Poster 
-            </h3>
-
-            <div class="price">
-                ₹149 - ₹299<span>+</span>
+                ₹149 - ₹299
             </div>
 
             <p>
@@ -1412,15 +1591,219 @@ Let's turn your vision into something extraordinary! 🚀
         <div class="price-card">
 
             <h3>
-                💥 Thumbnail 
+                📸 Photo Editing
             </h3>
 
             <div class="price">
-                ₹99 - ₹199<span>+</span>
+                ₹99 - ₹199
             </div>
 
             <p>
-                Attractive banner designs
+                Creative photo editing
+            </p>
+
+        </div>
+
+
+        <div class="price-card">
+
+            <h3>
+                🎬 Video Editing
+            </h3>
+
+            <div class="price">
+                ₹199 - ₹499
+            </div>
+
+            <p>
+                Creative social media edits
+            </p>
+
+        </div>
+
+
+        <div class="price-card">
+
+            <h3>
+                📱 Instagram Post
+            </h3>
+
+            <div class="price">
+                ₹99 - ₹199
+            </div>
+
+            <p>
+                Social media post designs
+            </p>
+
+        </div>
+
+
+        <div class="price-card">
+
+            <h3>
+                📢 Banner Design
+            </h3>
+
+            <div class="price">
+                ₹149 - ₹299
+            </div>
+
+            <p>
+                Custom banner designs
+            </p>
+
+        </div>
+
+
+        <div class="price-card">
+
+            <h3>
+                💥 Thumbnail Design
+            </h3>
+
+            <div class="price">
+                ₹99 - ₹199
+            </div>
+
+            <p>
+                YouTube and gaming thumbnails
+            </p>
+
+        </div>
+
+
+        <div class="price-card">
+
+            <h3>
+                💳 Visiting Card
+            </h3>
+
+            <div class="price">
+                ₹99 - ₹199
+            </div>
+
+            <p>
+                Clean visiting card designs
+            </p>
+
+        </div>
+
+
+        <div class="price-card">
+
+            <h3>
+                ✨ Custom Design
+            </h3>
+
+            <div class="price">
+                ₹149+
+            </div>
+
+            <p>
+                Price based on design requirements
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- ==================================================
+     WHY CHOOSE ME
+================================================== -->
+
+<section id="why">
+
+    <h2 class="section-title">
+        Why <span>Choose Me</span>
+    </h2>
+
+    <div class="why-grid">
+
+
+        <div class="why-card">
+
+            <h3>
+                💰 Affordable Pricing
+            </h3>
+
+            <p>
+                Clear and affordable pricing for
+                different types of creative work.
+            </p>
+
+        </div>
+
+
+        <div class="why-card">
+
+            <h3>
+                🎨 Custom Designs
+            </h3>
+
+            <p>
+                Designs are created according to
+                your requirements and ideas.
+            </p>
+
+        </div>
+
+
+        <div class="why-card">
+
+            <h3>
+                ✨ Clean Creative Work
+            </h3>
+
+            <p>
+                Focus on clean, attractive and
+                useful visual designs.
+            </p>
+
+        </div>
+
+
+        <div class="why-card">
+
+            <h3>
+                📱 Social Media Ready
+            </h3>
+
+            <p>
+                Designs suitable for Instagram,
+                YouTube and other social platforms.
+            </p>
+
+        </div>
+
+
+        <div class="why-card">
+
+            <h3>
+                🔄 Revision Support
+            </h3>
+
+            <p>
+                Small changes can be made based
+                on the agreed requirements.
+            </p>
+
+        </div>
+
+
+        <div class="why-card">
+
+            <h3>
+                💬 Easy Communication
+            </h3>
+
+            <p>
+                Simple communication through
+                WhatsApp or Instagram.
             </p>
 
         </div>
@@ -1482,6 +1865,296 @@ Let's turn your vision into something extraordinary! 🚀
             <p>
                 Customers satisfied with our work
             </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- ==================================================
+     WORK PROCESS
+================================================== -->
+
+<section id="process">
+
+    <h2 class="section-title">
+        Work <span>Process</span>
+    </h2>
+
+    <div class="process-grid">
+
+
+        <div class="process-card">
+
+            <div class="process-number">
+                01
+            </div>
+
+            <h3>
+                Contact
+            </h3>
+
+            <p>
+                Send your design requirements through
+                WhatsApp or Instagram.
+            </p>
+
+        </div>
+
+
+        <div class="process-card">
+
+            <div class="process-number">
+                02
+            </div>
+
+            <h3>
+                Discuss
+            </h3>
+
+            <p>
+                We discuss your idea, references
+                and requirements.
+            </p>
+
+        </div>
+
+
+        <div class="process-card">
+
+            <div class="process-number">
+                03
+            </div>
+
+            <h3>
+                Price Confirm
+            </h3>
+
+            <p>
+                Final price is confirmed before
+                starting the work.
+            </p>
+
+        </div>
+
+
+        <div class="process-card">
+
+            <div class="process-number">
+                04
+            </div>
+
+            <h3>
+                Design
+            </h3>
+
+            <p>
+                I create the design according to
+                your requirements.
+            </p>
+
+        </div>
+
+
+        <div class="process-card">
+
+            <div class="process-number">
+                05
+            </div>
+
+            <h3>
+                Revision
+            </h3>
+
+            <p>
+                Small changes can be made based
+                on your feedback.
+            </p>
+
+        </div>
+
+
+        <div class="process-card">
+
+            <div class="process-number">
+                06
+            </div>
+
+            <h3>
+                Final Delivery
+            </h3>
+
+            <p>
+                Final high-quality files are
+                delivered digitally.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- ==================================================
+     FAQ
+================================================== -->
+
+<section id="faq">
+
+    <h2 class="section-title">
+        Frequently Asked <span>Questions</span>
+    </h2>
+
+
+    <div class="faq-list">
+
+
+        <div class="faq-item">
+
+            <button
+                class="faq-question"
+                type="button">
+
+                How can I place an order?
+
+                <span class="faq-icon">
+                    +
+                </span>
+
+            </button>
+
+            <div class="faq-answer">
+
+                Contact me through WhatsApp or Instagram
+                and share your requirements.
+
+            </div>
+
+        </div>
+
+
+        <div class="faq-item">
+
+            <button
+                class="faq-question"
+                type="button">
+
+                Can I request a custom design?
+
+                <span class="faq-icon">
+                    +
+                </span>
+
+            </button>
+
+            <div class="faq-answer">
+
+                Yes. Custom designs are available based
+                on your requirements.
+
+            </div>
+
+        </div>
+
+
+        <div class="faq-item">
+
+            <button
+                class="faq-question"
+                type="button">
+
+                Do you provide revisions?
+
+                <span class="faq-icon">
+                    +
+                </span>
+
+            </button>
+
+            <div class="faq-answer">
+
+                Yes, revisions can be made based on
+                the agreed requirements.
+
+            </div>
+
+        </div>
+
+
+        <div class="faq-item">
+
+            <button
+                class="faq-question"
+                type="button">
+
+                How will I receive my design?
+
+                <span class="faq-icon">
+                    +
+                </span>
+
+            </button>
+
+            <div class="faq-answer">
+
+                Final files will be delivered digitally
+                in suitable formats.
+
+            </div>
+
+        </div>
+
+
+        <div class="faq-item">
+
+            <button
+                class="faq-question"
+                type="button">
+
+                How long does a project take?
+
+                <span class="faq-icon">
+                    +
+                </span>
+
+            </button>
+
+            <div class="faq-answer">
+
+                Delivery time depends on the type and
+                complexity of the project.
+
+            </div>
+
+        </div>
+
+
+        <div class="faq-item">
+
+            <button
+                class="faq-question"
+                type="button">
+
+                How much does a design cost?
+
+                <span class="faq-icon">
+                    +
+                </span>
+
+            </button>
+
+            <div class="faq-answer">
+
+                Pricing depends on the service.
+                Check the Pricing section for
+                starting rates.
+
+            </div>
 
         </div>
 
@@ -1904,11 +2577,6 @@ workCards.forEach(function(card){
             "click",
             function(event){
 
-                /*
-                   Only open lightbox when
-                   the actual image exists.
-                */
-
                 if(
                     event.target.tagName
                     === "IMG"
@@ -2036,11 +2704,6 @@ async function shareWebsite(){
 
     }catch(error){
 
-        /*
-           User cancelled share.
-           No error shown.
-        */
-
     }
 
 }
@@ -2114,11 +2777,6 @@ async function copyWebsiteLink(){
 
     }catch(error){
 
-        /*
-           Fallback for browsers
-           where clipboard API fails.
-        */
-
         const temp =
         document.createElement("textarea");
 
@@ -2173,6 +2831,42 @@ if(copyButton){
     );
 
 }
+
+
+/* ==================================================
+   FAQ ACCORDION
+================================================== */
+
+const faqQuestions =
+document.querySelectorAll(".faq-question");
+
+faqQuestions.forEach(function(question){
+
+    question.addEventListener(
+        "click",
+        function(){
+
+            const item =
+            question.parentElement;
+
+            document
+            .querySelectorAll(".faq-item")
+            .forEach(function(otherItem){
+
+                if(otherItem !== item){
+
+                    otherItem.classList.remove("open");
+
+                }
+
+            });
+
+            item.classList.toggle("open");
+
+        }
+    );
+
+});
 
 
 /* ==================================================
